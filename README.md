@@ -12,7 +12,19 @@ git clone https://github.com/ArielMejiaDev/filters-pagination-propousal.git proj
 composer install
 ```
 
+#### Import postman collection
+
+[Collection link](https://drive.google.com/file/d/15VEcYY8-yNkyRkL1rZnAjlLTDIwYNcF_/view?usp=sharing)
+
+Instructions to import postman collection [here](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing)
+
 #### Set environment
+
+Create the .env file
+
+```
+cp .env.example .env
+```
 
 Create the database
 
@@ -25,12 +37,6 @@ run migrations and seeds
 ```
 php artisan migrate:fresh --seed
 ```
-
-#### Import postman collection
-
-[Collection link](https://drive.google.com/file/d/15VEcYY8-yNkyRkL1rZnAjlLTDIwYNcF_/view?usp=sharing)
-
-Instructions to import postman collection [here](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing)
 
 #### Move with GIT on commits
 
