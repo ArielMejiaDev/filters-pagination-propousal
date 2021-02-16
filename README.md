@@ -6,18 +6,24 @@
 git clone https://github.com/ArielMejiaDev/filters-pagination-propousal.git project
 ```
 
+#### Install dependencies
+
+```
+composer install
+```
+
 #### Set environment
 
 Create the database
 
 ```
-mkdir database/database.sqlite
+touch database/database.sqlite
 ```
 
-#### Install dependencies
+run migrations and seeds
 
 ```
-composer install
+php artisan migrate:fresh --seed
 ```
 
 #### Import postman collection
