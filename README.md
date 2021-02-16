@@ -8,7 +8,11 @@ git clone https://github.com/ArielMejiaDev/filters-pagination-propousal.git proj
 
 #### Set environment
 
-You do not need to set anything only download dependencies
+Create the database
+
+```
+mkdir database/database.sqlite
+```
 
 #### Install dependencies
 
