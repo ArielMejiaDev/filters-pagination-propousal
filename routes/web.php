@@ -22,17 +22,17 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
 
-    // Intermediate queries endpoints
+    // Advance queries endpoints
     //-------------------------
-    // adding filters with a scope (yesterday_user would search a user created yesterday by name)
-    // adding alias to filter scope (nameOfYesterday as yesterday_user)
-    // adding alias to sorts (user as username)
-    // adding append to an accessor (to show name in uppercase)
+    // including role model
+    // select fields from user model
+    // select fields from role model
 
-    $users = QueryBuilder::for(User::class)->allowedFilters(['name', \Spatie\QueryBuilder\AllowedFilter::scope('yesterday_user', 'nameOfYesterday')])
-        ->allowedSorts('name', \Spatie\QueryBuilder\AllowedSort::field('username', 'name'))
-        ->allowedFields(['name', 'email'])
+    $users = QueryBuilder::for(User::class)->allowedFilters('name')
+        ->allowedSorts('name')
         ->allowedAppends(['name_in_uppercase'])
+        ->allowedFields(['name', 'email', 'role_id', 'role.id', 'role.name'])
+        ->allowedIncludes(['role'])
         ->jsonPaginate();
 
     return UserResource::collection($users);
