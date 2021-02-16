@@ -22,16 +22,15 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
 
-    // Simple queries endpoints
+    // Intermediate queries endpoints
     //-------------------------
-    // query to filter by name,
-    // sort by name,
-    // select on query strings name & email,
-    // append a scope nameInUppercase
-    // & paginate as json api specification requires
+    // adding filters with a scope (yesterday_user would search a user created yesterday by name)
+    // adding alias to filter scope (nameOfYesterday as yesterday_user)
+    // adding alias to sorts (user as username)
+    // adding append to an accessor (to show name in uppercase)
 
-    $users = QueryBuilder::for(User::class)->allowedFilters('name')
-        ->allowedSorts('name')
+    $users = QueryBuilder::for(User::class)->allowedFilters(['name', \Spatie\QueryBuilder\AllowedFilter::scope('yesterday_user', 'nameOfYesterday')])
+        ->allowedSorts('name', \Spatie\QueryBuilder\AllowedSort::field('username', 'name'))
         ->allowedFields(['name', 'email'])
         ->allowedAppends(['name_in_uppercase'])
         ->jsonPaginate();
