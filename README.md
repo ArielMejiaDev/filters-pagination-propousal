@@ -1,5 +1,11 @@
 ## Decision Link filter & pagination proposal.
 
+#### Download the project
+
+```
+git clone https://github.com/ArielMejiaDev/filters-pagination-propousal.git project
+```
+
 #### Set environment
 
 As it is a sample the `.env` its added to version control.
