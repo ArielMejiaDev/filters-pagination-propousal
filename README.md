@@ -8,20 +8,12 @@ git clone https://github.com/ArielMejiaDev/filters-pagination-propousal.git proj
 
 #### Set environment
 
-As it is a sample the `.env` its added to version control.
-
-In `database` directory you would find the database.sqlite file so everything is ready to start.
+You do not need to set anything only download dependencies
 
 #### Install dependencies
 
 ```
 composer install
-```
-
-#### Run the migrations
-
-```
-php artisan migrate:fresh --seed
 ```
 
 #### Import postman collection
