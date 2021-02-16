@@ -14,9 +14,7 @@ composer install
 
 #### Import postman collection
 
-[Collection link](https://drive.google.com/file/d/15VEcYY8-yNkyRkL1rZnAjlLTDIwYNcF_/view?usp=sharing)
-
-Instructions to import postman collection [here](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing)
+<a href="https://drive.google.com/file/d/15VEcYY8-yNkyRkL1rZnAjlLTDIwYNcF_/view?usp=sharing" target="_blank">Download postman collection here.</a>
 
 #### Set environment
 
