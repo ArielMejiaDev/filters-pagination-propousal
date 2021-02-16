@@ -1,17 +1,16 @@
 ## Decision Link filter & pagination proposal.
 
-#### Set database on .env file as sqlite
+#### Set environment
 
-```dotenv
-DB_CONNECTION=sqlite
-#DB_HOST=127.0.0.1
-#DB_PORT=3306
-#DB_DATABASE=project
-#DB_USERNAME=root
-#DB_PASSWORD=
+As it is a sample the `.env` its added to version control.
+
+In `database` directory you would find the database.sqlite file so everything is ready to start.
+
+#### Install dependencies
+
 ```
-
-In `database` directory you would find the database.sqlite file
+composer install
+```
 
 #### Run the migrations
 
@@ -21,6 +20,8 @@ php artisan migrate:fresh --seed
 
 #### Import postman collection
 
+[Collection link](https://drive.google.com/file/d/15VEcYY8-yNkyRkL1rZnAjlLTDIwYNcF_/view?usp=sharing)
+
 Instructions to import postman collection [here](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing)
 
 #### Move with GIT on commits
@@ -28,17 +29,17 @@ Instructions to import postman collection [here](https://kb.datamotion.com/?ht_k
 ###### Move to Simple example directory endpoints
 
 ```
-git checkout d92092a
+git checkout 6c822ca
 ```
 
 ###### Move to Intermediate example directory endpoints
 
 ```
-git checkout 1829b3d
+git checkout 879a9a2
 ```
 
 ###### Move to Advance example directory endpoints
 
 ```
-git checkout 8a3c528
+git checkout 0fa46fe
 ```
